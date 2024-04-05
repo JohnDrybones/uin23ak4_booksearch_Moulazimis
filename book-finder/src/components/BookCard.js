@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from './Book';
 
-const BookList = ({ books }) => {
+const BookCard = ({ books }) => {
   return (
     <section className="book-list">
       {books.map((book, index) => (
@@ -11,4 +11,4 @@ const BookList = ({ books }) => {
   );
 };
 
-export default BookList;
+export default BookCard;
