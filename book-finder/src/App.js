@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <input
+          type="text"
+          placeholder="Søk etter bøker..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
       </header>
+      <main>
+        <section className="book-list">
+          {/* Boklisten */}
+          <p>Søk etter en bok for å starte.</p>
+        </section>
+      </main>
     </div>
   );
 }
