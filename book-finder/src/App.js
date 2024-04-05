@@ -30,7 +30,7 @@ function App() {
       if (value.length >= 3) {
         fetchBooks(value);
       }
-    }, 500);
+    }, 300);
   
     setTimeoutId(newTimeoutId);
   };

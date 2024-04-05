@@ -5,7 +5,7 @@ const BookCard = ({ books }) => {
   return (
     <section className="book-list">
       {books.map((book, index) => (
-        <Book key={index} book={book} />
+        <Book key={book.key} book={book} />
       ))}
     </section>
   );
